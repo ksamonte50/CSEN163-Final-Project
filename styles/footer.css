@@ -1,42 +1,67 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
 footer {
   background-color: #862633; /* Dark red background */
-  color: white;
-  text-align: center;
+  color: #fff;
   padding: 20px 0;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  max-width: 1700px; /* Max width as per your screenshot */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 0 20px;
+}
+
+#email {
+  color: white;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 50px;
+  min-width: 225px;
+  text-align: left; /* Align text to the left */
 }
 
 .footer-section h3,
 .footer-section h4 {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .footer-section p,
 .footer-section ul {
-  margin: 0;
-  padding: 0;
+  margin: 10px 0;
+}
+
+.footer-section ul {
   list-style: none;
+  padding: 0;
 }
 
-.footer-section a {
-  color: white;
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+  color: #fff;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-.footer-section a:hover {
-  color: #a8a8a8; /* Lighter shade for hover effect */
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.contact-link {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
 }

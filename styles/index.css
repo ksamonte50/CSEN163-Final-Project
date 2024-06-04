@@ -1,14 +1,173 @@
-.dropdown {
-  margin: 20px; /* Provides spacing around the dropdown */
+.enter-your-school {
+  padding: 0;
+  margin: 0;
+  background-image: url("../assets/bgimage.png");
+  text-align: center;
+  height: 680px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-select {
-  padding: 8px 16px;
-  border: 2px solid #ccc; /* Stylish border for the dropdown */
-  border-radius: 4px; /* Rounded corners for the dropdown */
-  font-size: 16px; /* Increases the font size for better readability */
+.enter-your-school p {
+  margin-top: 0;
+  font-size: 30px;
+  color: #646464;
 }
 
-select:focus {
-  border-color: #862633; /* Changes border color when focused */
+h1 {
+  font-size: 70px;
+  color: #486284;
+}
+h2 {
+  font-size: 55px;
+  color: #486284;
+}
+
+.buttons {
+  flex-direction: column;
+  font-size: 20px;
+  color: #646464;
+}
+
+#school-dropdown {
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 30%;
+}
+
+.schools-we-offer {
+  margin: 0 auto;
+  padding: 5rem 0;
+  width: 100%;
+  background-color: #f7f6f2;
+  text-align: center;
+}
+
+.schools-we-offer p {
+  font-size: 50px;
+  color: #486284;
+}
+
+.schools-we-offer h2 {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.stanford-img,
+.scu-img,
+.usf-img {
+  text-align: center;
+}
+
+.stanford-img img,
+.scu-img img,
+.usf-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.usf-img {
+  margin-top: 50px;
+}
+
+.about-us {
+  padding: 5rem;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us h2,
+.about-us p {
+  text-align: left;
+}
+
+.about-us p {
+  width: 80%;
+  color: #8ca2c0;
+  font-size: 25px;
+  padding-bottom: 2rem;
+}
+
+.about-us-img {
+  width: 50%;
+  align-items: center;
+  padding-left: 25%;
+  padding-right: 30%;
+}
+
+.faq {
+  background-color: #f7f6f2;
+  border: none;
+  margin: 0;
+  padding: 5rem;
+  width: 100%;
+}
+
+.clickable-faq {
+  width: 70%;
+  padding-top: 2.5rem;
+  padding-bottom: 5rem;
+}
+
+.accordion {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 0.5px solid gray;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 30px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.contact-link,
+.contact-link:visited {
+  color: black;
+}
+
+.contact-link:hover {
+  color: darkred;
 }
