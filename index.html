@@ -42,7 +42,7 @@
       <h1>Enter Your School</h1>
       <p>Find the best food on campus!</p>
 
-      <div class="buttons">
+      <div class="buttons-container">
         <div id="school-dropdown">
           <form id="school-form" action="">
             <label for="dropdown">Choose an option:</label>
@@ -51,24 +51,19 @@
               <option value="stanford.html">Stanford University</option>
               <option value="usf.html">University of San Francisco</option>
             </select>
-            <input type="submit" value="Go">
+            <input type="submit" value="Go" />
           </form>
         </div>
+        <a href="rating.html" class="rating-btn">Leave a Rating</a>
       </div>
-      
+
       <script>
-        document.getElementById('school-form').onsubmit = function(event) {
+        document.getElementById("school-form").onsubmit = function (event) {
           event.preventDefault();
-          var selectedValue = document.getElementById('dropdown').value;
+          var selectedValue = document.getElementById("dropdown").value;
           window.location.href = selectedValue;
         };
       </script>
-      
-      
-      
-
-        <a href="rating.html" class="rating-btn">Leave a Rating</a>
-      </div>
     </div>
 
     <div class="schools-we-offer">
@@ -82,7 +77,7 @@
             </a>
             <p>Stanford</p>
           </div>
-      
+
           <div class="scu-img">
             <a href="scu.html">
               <img src="assets/scu.png" alt="SCU Image" />
@@ -90,7 +85,7 @@
             <p>SCU</p>
           </div>
         </div>
-      
+
         <div class="usf-img">
           <a href="usf.html">
             <img src="assets/usf.png" alt="USF Image" />
@@ -98,7 +93,7 @@
           <p>USF</p>
         </div>
       </div>
-          </div>
+    </div>
 
     <div class="about-us">
       <h2>About Us</h2>
@@ -129,10 +124,11 @@
         <button class="accordion">How do you use our app?</button>
         <div class="panel">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Using our app is straightforward. Start by selecting your school
+            from the dropdown menu on the main page. You can then browse the
+            dining hall options, read reviews, and leave your own ratings. If
+            you have any questions or run into any issues, feel free to contact
+            us through the contact page.
           </p>
         </div>
 
@@ -141,10 +137,11 @@
         </button>
         <div class="panel">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            To submit dining hall ratings, simply navigate to the dining hall
+            you wish to rate and click on the "Leave a Rating" button. You will
+            be prompted to provide your rating and any comments you have about
+            the dining experience. Once submitted, your rating will be visible
+            to other users.
           </p>
         </div>
 
@@ -153,17 +150,26 @@
         </button>
         <div class="panel">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            We take your privacy seriously. Our app only collects information
+            necessary for providing the service, such as your email for account
+            creation and communication. We do not share your personal
+            information with third parties without your consent. For more
+            details, please refer to our Privacy Policy page. Our location
+            policy ensures that we only track location data when necessary for
+            providing location-based services, and you have full control over
+            your location settings.
           </p>
         </div>
       </div>
 
       <p class="unanswered">
         Didn't see your question answered here?
-        <a class="contact-link" href="contact.html">Contact us!</a>
+        <a
+          style="text-decoration: underline"
+          class="contact-link"
+          href="contact.html"
+          >Contact us!</a
+        >
       </p>
     </div>
 
@@ -183,43 +189,37 @@
         });
       }
     </script>
-<footer>
-  <div class="footer-content">
-    <div class="footer-section">
-
-      <a href="index.html"> 
-       
-        <img
-        src="assets/logo.png"
-        width="250px"
-        alt="logo"
-      />
-
-      </a>
-      <p>Finding the best food on campus.</p>
-      <p>
-        <a  style="color:white;" id="email" href="">ratemyplate@mail.com</a>
-      </p>
-      <a style="color:white;" class="contact-link" href="contact.html">Contact Us</a>
-    </div>
-    <div class="footer-section">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="">Documentation</a></li>
-        <li><a href="">Guide</a></li>
-        <li><a href="">Tutorial</a></li>
-      </ul>
-    </div>
-    <div class="footer-section">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="">About</a></li>
-        <li><a href="">Join Us</a></li>
-        <li><a href="">Partners</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
-
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <a href="index.html">
+            <img src="assets/logo.png" width="250px" alt="logo" />
+          </a>
+          <p>Finding the best food on campus.</p>
+          <p>
+            <a style="color: white" id="email" href="">ratemyplate@mail.com</a>
+          </p>
+          <a style="color: white" class="contact-link" href="contact.html"
+            >Contact Us</a
+          >
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="">Documentation</a></li>
+            <li><a href="">Guide</a></li>
+            <li><a href="">Tutorial</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Join Us</a></li>
+            <li><a href="">Partners</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
