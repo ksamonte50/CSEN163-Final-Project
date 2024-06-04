@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RateMyPlate | Login</title>
+    <title>RateMyPlate | Create</title>
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/footer.css" />
@@ -19,14 +19,23 @@
     <div class="container">
       <div class="left-column">
         <div class="column-header">
-          <p class="login-header">Login</p>
+          <p class="login-header">Create an Account</p>
         </div>
         <div class="input-container">
-          <label for="email">Enter School Email: </label> <br>
+          <label for="email">Enter School Email: </label> <br />
           <input type="text" id="email" name="email" /><br /><br />
-          <label for="password">Password: </label> <br>
+          <label for="email">Username: </label> <br />
           <input type="text" id="password" name="password" /><br /><br />
-          <p class="forgot-password-text">Forgot your password?</p>
+          <label for="password">Password: </label> <br />
+          <input type="text" id="password" name="password" /><br /><br />
+          <label for="password">Confirm Password: </label> <br />
+          <input type="text" id="password" name="password" /><br /><br />
+          <label for="password">Enter Your School: </label> <br />
+          <select id="SchoolDropdown" class="school-dropdown">
+            <option value="scu">Santa Clara University</option>
+            <option value="stanford">Stanford University</option>
+            <option value="usf">University of San Francisco</option>
+          </select>
         </div>
 
         <button
@@ -35,18 +44,6 @@
         >
           Let's Go!
         </button>
-      </div>
-      <div class="divider"></div>
-      <div class="right-column">
-        <div class="column-header">
-          <p class="login-header">Don't Have an Account?</p>
-          <button
-            class="login-buttons"
-            onclick="window.location.href = 'create.html';"
-          >
-            Create One!
-          </button>
-        </div>
       </div>
     </div>
     <footer>
