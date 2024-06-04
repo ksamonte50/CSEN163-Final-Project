@@ -1,0 +1,14 @@
+.dropdown {
+  margin: 20px; /* Provides spacing around the dropdown */
+}
+
+select {
+  padding: 8px 16px;
+  border: 2px solid #ccc; /* Stylish border for the dropdown */
+  border-radius: 4px; /* Rounded corners for the dropdown */
+  font-size: 16px; /* Increases the font size for better readability */
+}
+
+select:focus {
+  border-color: #862633; /* Changes border color when focused */
+}
