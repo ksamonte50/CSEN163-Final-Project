@@ -1,0 +1,84 @@
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+
+    <link
+      id="favicon"
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/favicon.png"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/eod0wjm.css" />
+    <script
+      src="https://kit.fontawesome.com/7e152adade.js"
+      crossorigin="anonymous"
+    ></script>
+
+  </head>
+
+  <body>
+
+    <header>
+      <a href="index.html">
+        <img style="float: left" src="assets/logo.png" width=300px" alt="logo"
+        class="navbar-logo" />
+      </a>
+      <ul style="float: right" class="nav-bar">
+        <li id="nav"><a href="login.html">Login</a></li>
+      </ul>
+    </header>
+    
+    <div class="container">
+      <div class="q question-1">
+        <p class="icon q-header">
+
+          CONTACT US
+        </p>
+        <div class="description">
+          <p>Please reach out to us if you have any questions!</p>
+        </div>
+      </div>
+      <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question"><br><br>
+
+        <input type="button" value="Submit" onclick="submitForm()">
+        <p id="error-message" style="color: red;"></p> 
+    </form>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var errorMessage = document.getElementById("error-message");
+
+            // Check if either the name or email is empty
+            if (name === "" || email === "" || question === "") {
+                errorMessage.textContent = "Both name, email, and question must be filled out.";
+                return; // Stop the function if validation fails
+            } else {
+                errorMessage.textContent = ""; // Clear any previous error messages
+                alert("Your question has been submitted!");
+            }
+        }
+    </script>
+      </html>
+    </div>
+  </body>
+</html>

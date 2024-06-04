@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RateMyPlate</title>
@@ -9,76 +15,93 @@
     <link rel="stylesheet" href="./styles/footer.css" />
 
     <link rel="icon" type="image/png" sizes="35x37" href="favicon.png" />
-    <link rel="icon" type="image/x-icon" href="./assets/logo.png" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png" />
     <link rel="stylesheet" href="https://use.typekit.net/eod0wjm.css" />
     <script
       src="https://kit.fontawesome.com/7e152adade.js"
       crossorigin="anonymous"
     ></script>
-
-    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
-      <img src="assets/logo.png" width=300px" alt="logo" class="navbar-logo" />
-      <ul class="nav-bar">
-        <li id="nav"><a href="login.html">Login</a></li>
+      <a href="index.html">
+        <img
+          style="float: left"
+          src="assets/logo.png"
+          width="300px"
+          alt="logo"
+          class="navbar-logo"
+        />
+      </a>
+      <ul style="float: right" class="nav-bar">
+        <li class="login"><a href="login.html">Login</a></li>
       </ul>
     </header>
 
     <div class="enter-your-school">
       <h1>Enter Your School</h1>
       <p>Find the best food on campus!</p>
+
       <div class="buttons">
-        <label for="SchoolDropdown">Choose an option:</label>
-        <select id="SchoolDropdown">
-          <option value="scu">Santa Clara University</option>
-          <option value="stanford">Stanford University</option>
-          <option value="usf">University of San Francisco</option>
-        </select>
+        <div id="school-dropdown">
+          <form id="school-form" action="">
+            <label for="dropdown">Choose an option:</label>
+            <select id="dropdown">
+              <option value="scu.html">Santa Clara University</option>
+              <option value="stanford.html">Stanford University</option>
+              <option value="usf.html">University of San Francisco</option>
+            </select>
+            <input type="submit" value="Go">
+          </form>
+        </div>
+      </div>
+      
+      <script>
+        document.getElementById('school-form').onsubmit = function(event) {
+          event.preventDefault();
+          var selectedValue = document.getElementById('dropdown').value;
+          window.location.href = selectedValue;
+        };
+      </script>
+      
+      
+      
+
         <a href="rating.html" class="rating-btn">Leave a Rating</a>
       </div>
     </div>
 
     <div class="schools-we-offer">
-      <h1>Schools We Offer</h1>
+      <h2 style="text-decoration: underline">Schools We Offer</h2>
 
-      <div class="stanford-img">
-        <a href="stanford.html">
-          <img src="assets/stanford.png" alt="stanford-img" />
-        </a>
-        <p>Stanford</p>
+      <div class="image-container">
+        <div class="image-row">
+          <div class="stanford-img">
+            <a href="stanford.html">
+              <img src="assets/stanford.png" alt="Stanford Image" />
+            </a>
+            <p>Stanford</p>
+          </div>
+      
+          <div class="scu-img">
+            <a href="scu.html">
+              <img src="assets/scu.png" alt="SCU Image" />
+            </a>
+            <p>SCU</p>
+          </div>
+        </div>
+      
+        <div class="usf-img">
+          <a href="usf.html">
+            <img src="assets/usf.png" alt="USF Image" />
+          </a>
+          <p>USF</p>
+        </div>
       </div>
-
-      <div class="scu-img">
-        <a href="scu.html">
-          <img src="assets/scu.png" alt="scu-img" />
-        </a>
-        <p>SCU</p>
-      </div>
-
-      <div class="usf-img">
-        <a href="usf.img">
-          <img src="assets/usf.png" alt="usf-img" />
-        </a>
-        <p>USF</p>
-      </div>
-    </div>
+          </div>
 
     <div class="about-us">
-      <h1>About Us</h1>
-      <p>
-        We are a team of Santa Clara University students that are looking to
-        help bay area college students find the best food on their campus. We
-        know that dining hall food options can be expensive and daunting, so we
-        hope this web application can be useful!
-      </p>
-      <img src="assets/scu-aboutus.png" alt="scu-aboutus" />
-    </div>
-
-    <div class="container-3">
-      <h1>About Us</h1>
-
+      <h2>About Us</h2>
       <p>
         We are a team of Santa Clara University students that are looking to
         help bay area college students find the best food on their campus. We
@@ -86,66 +109,117 @@
         hope this web application can be useful!
       </p>
 
-      <img src="assets/scu-aboutus.png" alt="scu-aboutus" />
+      <div class="about-us-img">
+        <img src="assets/scu-aboutus.png" alt="scu-aboutus" />
+      </div>
     </div>
 
     <div class="faq">
-      <h1>FAQ</h1>
+      <h2>FAQ</h2>
+      <div class="clickable-faq">
+        <button class="accordion">What if you don't have our school?</button>
+        <div class="panel">
+          <p>
+            You can always send us a request on the contact page, and we can
+            review the school. Once we get the school published, we will send
+            you an email invite to try it out!
+          </p>
+        </div>
 
-      <div class="collapsible">
-        <h3>What if you don't have our school?</h3>
-        <p class="content">
-          You can always send us a request on the contact page, and we can
-          review the school. Once we get the school published, we will send you
-          an email invite to try it out!
-        </p>
+        <button class="accordion">How do you use our app?</button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+
+        <button class="accordion">
+          How do you submit dining hall ratings?
+        </button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+
+        <button class="accordion">
+          What are your location and privacy policies?
+        </button>
+        <div class="panel">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
       </div>
 
-      <h3>How do you use our app?</h3>
-      <p></p>
-
-      <h3>What are your location and privacy policies?</h3>
-      <p></p>
-
-      <h3>How do you submit dining hall ratings?</h3>
-      <p></p>
+      <p class="unanswered">
+        Didn't see your question answered here?
+        <a class="contact-link" href="contact.html">Contact us!</a>
+      </p>
     </div>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>RateMyPlate</h3>
-          <p>Finding the best food on campus.</p>
-          <p>
-            <a href="mailto:ratemyplate@mail.com">ratemyplate@mail.com</a>
-          </p>
-          <p>+12 3456 7890</p>
-        </div>
-        <div class="footer-section">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Guide</a></li>
-            <li><a href="#">Tutorial</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Join Us</a></li>
-            <li><a href="#">Partners</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Claim</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+
+      <a href="index.html"> 
+       
+        <img
+        src="assets/logo.png"
+        width="250px"
+        alt="logo"
+      />
+
+      </a>
+      <p>Finding the best food on campus.</p>
+      <p>
+        <a  style="color:white;" id="email" href="">ratemyplate@mail.com</a>
+      </p>
+      <a style="color:white;" class="contact-link" href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="">Documentation</a></li>
+        <li><a href="">Guide</a></li>
+        <li><a href="">Tutorial</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="">About</a></li>
+        <li><a href="">Join Us</a></li>
+        <li><a href="">Partners</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
   </body>
 </html>
