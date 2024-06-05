@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RateMyPlate | Create</title>
@@ -11,9 +17,17 @@
   </head>
   <body>
     <header>
-      <img src="assets/logo.png" width=300px" alt="logo" class="navbar-logo" />
-      <ul class="nav-bar">
-        <li id="nav"><a href="login.html">Login</a></li>
+      <a href="index.html">
+        <img
+          style="float: left"
+          src="assets/logo.png"
+          width="300px"
+          alt="logo"
+          class="navbar-logo"
+        />
+      </a>
+      <ul style="float: right" class="nav-bar">
+        <li class="login"><a href="login.html">Login</a></li>
       </ul>
     </header>
     <div class="container">
@@ -49,35 +63,31 @@
     <footer>
       <div class="footer-content">
         <div class="footer-section">
-          <h3>RateMyPlate</h3>
+          <a href="index.html">
+            <img src="assets/logo.png" width="250px" alt="logo" />
+          </a>
           <p>Finding the best food on campus.</p>
           <p>
-            <a href="mailto:ratemyplate@mail.com">ratemyplate@mail.com</a>
+            <a style="color: white" id="email" href="">ratemyplate@mail.com</a>
           </p>
-          <p>+12 3456 7890</p>
+          <a style="color: white" class="contact-link" href="contact.html"
+            >Contact Us</a
+          >
         </div>
         <div class="footer-section">
           <h4>Support</h4>
           <ul>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Guide</a></li>
-            <li><a href="#">Tutorial</a></li>
+            <li><a href="">Documentation</a></li>
+            <li><a href="">Guide</a></li>
+            <li><a href="">Tutorial</a></li>
           </ul>
         </div>
         <div class="footer-section">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Join Us</a></li>
-            <li><a href="#">Partners</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="#">Claim</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Join Us</a></li>
+            <li><a href="">Partners</a></li>
           </ul>
         </div>
       </div>
