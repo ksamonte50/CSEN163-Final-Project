@@ -111,4 +111,14 @@ a1 {
     padding-top: 20px;
 }
 
+.review{
+    border-radius: 7px;
+    background-color: #e6e6e6;
+    border-style: none;
+    padding: 25px;
+    padding-left: 30px;
+    margin-bottom: 25px;
+    margin-inline: 20px;
+}
+
 
