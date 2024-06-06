@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RateMyPlate</title>
@@ -20,38 +26,57 @@
   </head>
   <body>
     <header>
-      <img src="assets/logo.png" width=300px" alt="logo" class="navbar-logo" />
-      <ul class="nav-bar">
-        <li id="nav"><a href="login.html">Login</a></li>
-      </ul>
-    </header>
+        <a href="index.html">
+          <img
+            style="float: left"
+            src="assets/logo.png"
+            width="300px"
+            alt="logo"
+            class="navbar-logo"
+          />
+        </a>
+        <ul style="float: right" class="nav-bar">
+          <li class="login"><a href="login.html">Login</a></li>
+        </ul>
+      </header>
+    <div class="main-content">
+        <h1> Leave a Review </h1>
+        <h2 class="school-name"> Santa Clara University </h2>
+        <div class="metrics container">
+            <p class="metric-inline review-element">Quality</p>
+            <p id="qualityValue" class="metric-inline" style="color: #B30738; margin-left: 5px;">3</p>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="5" value="3" class="slider" id="qualityRange">
+                
+            </div>
+            <p class="metric-inline review-element">Taste</p>
+            <p id="tasteValue" class="metric-inline" style="color: #B30738; margin-left: 5px;">3</p>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="5" value="3" class="slider" id="tasteRange">
+            
+            </div>
+            <p class="metric-inline review-element">Freshness</p>
+            <p id="freshnessValue" class="metric-inline" style="color: #B30738; margin-left: 5px;">3</p>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="5" value="3" class="slider" id="freshnessRange">
+            </div>
 
-    <h1> Leave a Review </h1>
-    <h2> Santa Clara University </h2>
-    <div>
-        <p>Quality</p>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
+            <div class="input-group review-element">
+                <label for="description">Comments</label>
+                <div>
+                    <textarea class="input-group__input" id="description" name="description" placeholder="Write a review..." style="height:200px; width: 50%; margin-top: 5px;"></textarea>
+                </div>
+              </div>
+              <div>
+                <img src="photoicon.png" alt="Photo icon" class="icon review-element metric-inline">
+                <form action="/action_page.php" class="icon metric-inline">
+                    <input type="file" id="myFile" name="filename">
+                    <img src="plusicon.png" alt="Click to upload" class="upload-image metric-inline" id="uploadImage" style="padding-top: 5px;">                
+                </form>
+              </div>
+            
+            <button type="button" id="submitButton" class="button">Submit</button>
         </div>
-        <p>Taste</p>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
-        </div>
-        <p>Freshness</p>
-        <div class="slidecontainer">
-            <input type="range" min="1" max="5" value="3" class="slider" id="myRange">
-        </div>
-
-        <p>Comments</p>
-        <div>
-            <input type="text" placeholder="Write your review here..." id="comments" style="width: 300px; height: 50px;">
-        </div>
-        <img src="photoicon.png" alt="Photo icon">
-        <img src="plusicon.png" alt="Plus icon">
-        <form action="/action_page.php">
-            <input type="file" id="myFile" name="filename">
-            <input type="submit">
-          </form>
     </div>
     
 
@@ -92,14 +117,24 @@
         </div>
       </footer>
       <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value; // Display the default slider value
+        document.getElementById('qualityRange').oninput = function() {
+            document.getElementById('qualityValue').innerText = this.value;
+        };
+        document.getElementById('tasteRange').oninput = function() {
+            document.getElementById('tasteValue').innerText = this.value;
+        };
+        document.getElementById('freshnessRange').oninput = function() {
+            document.getElementById('freshnessValue').innerText = this.value;
+        };
 
-        // Update the current slider value (each time you drag the slider handle)
-        slider.oninput = function() {
-        output.innerHTML = this.value;
-        }
+        document.getElementById('uploadImage').addEventListener('click', function() {
+            document.getElementById('myFile').click();
+        });
+
+        const button = document.getElementById('submitButton');
+        button.addEventListener('click', function() {
+            alert('Your review has been submitted!');
+        });
       </script>
     </body>
   </html>
