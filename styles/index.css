@@ -1,14 +1,262 @@
-.dropdown {
-  margin: 20px; /* Provides spacing around the dropdown */
+* {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", serif;
 }
 
-select {
-  padding: 8px 16px;
-  border: 2px solid #ccc; /* Stylish border for the dropdown */
-  border-radius: 4px; /* Rounded corners for the dropdown */
-  font-size: 16px; /* Increases the font size for better readability */
+header {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 104px;
+  background: #862633;
 }
 
-select:focus {
-  border-color: #862633; /* Changes border color when focused */
+.navbar-logo {
+  padding: 1.5rem;
+  float: left;
+}
+
+.nav-bar {
+  border-radius: 3px;
+  border: 1px solid white;
+  width: 100px; /* Adjust the width as needed */
+  margin-top: 1.5rem;
+  margin-right: 3rem;
+  padding: 0; /* Reset padding */
+  list-style-type: none;
+  float: right;
+  text-align: right; /* Align text to the right */
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin-right: 2rem;
+  display: flex;
+}
+
+.nav-bar li {
+  margin-left: 1rem;
+}
+
+.nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+
+.login,
+.contact {
+  padding: 0.8rem;
+  color: white;
+}
+
+.login:visited,
+.contact:visited {
+  color: white;
+}
+
+.enter-your-school {
+  padding: 0;
+  margin: 0;
+  background-image: url("../assets/bgimage.png");
+  text-align: center;
+  height: 680px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.enter-your-school p {
+  margin-top: 0;
+  font-size: 30px;
+  color: #646464;
+}
+
+h1 {
+  font-size: 70px;
+  color: #486284;
+}
+
+h2 {
+  font-size: 55px;
+  color: #486284;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Add spacing between the buttons */
+  font-size: 20px;
+  color: #646464;
+  margin-top: 20px; /* Add some top margin to space from other elements */
+}
+
+#school-dropdown {
+  padding: 1rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Slightly transparent background */
+}
+
+.rating-btn {
+  padding: 1.2rem;
+  background-color: #fff;
+  color: #486284;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.rating-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.schools-we-offer {
+  margin: 0 auto;
+  padding: 5rem 0;
+  width: 100%;
+  background-color: #f7f6f2;
+  text-align: center;
+}
+
+.schools-we-offer p {
+  font-size: 50px;
+  color: #486284;
+}
+
+.schools-we-offer h2 {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.stanford-img,
+.scu-img,
+.usf-img {
+  text-align: center;
+}
+
+.stanford-img img,
+.scu-img img,
+.usf-img img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.usf-img {
+  margin-top: 50px;
+}
+
+.about-us {
+  padding: 5rem;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-us h2,
+.about-us p {
+  text-align: left;
+}
+
+.about-us p {
+  width: 80%;
+  color: #8ca2c0;
+  font-size: 25px;
+  padding-bottom: 2rem;
+}
+
+.about-us-img {
+  width: 50%;
+  align-items: center;
+  padding-left: 25%;
+  padding-right: 30%;
+}
+
+.faq {
+  background-color: #f7f6f2;
+  border: none;
+  margin: 0;
+  padding: 5rem;
+  width: 100%;
+}
+
+.clickable-faq {
+  width: 70%;
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+.accordion {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: 0.5px solid gray;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.accordion:after {
+  content: "\002B";
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 30px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.contact-link,
+.contact-link:visited {
+  color: black;
+}
+
+.contact-link:hover {
+  color: darkred;
 }
