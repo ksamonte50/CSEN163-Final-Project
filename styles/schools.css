@@ -10,15 +10,36 @@
 .reviewtext {
     color:#862633;
     font-size: 30px;
+    padding-top: 40px;
+}
+
+.headerreview{
+    display: block;
+    /* font-size: 2; */
+    font-weight: bold;
+}
+
+.reviewlinks{
+    padding-top: 30px;
+    font-size: large;
 }
 
 .fraction1 {
     font-size: 50px;
-    text-align: center;
+    /* text-align: center; */
+    padding-left: 50px;
+    padding-top: 10px;
+
+}
+a {
+    color:#862633
 }
 
+a1 {
+    color:black
+}
 .fraction2{
-    text-align: center;
+    padding-left: 40px;
 }
 .rating-section .rating {
     font-size: 48px;
@@ -83,5 +104,7 @@
     /* margin-left: 150px; */
     padding-left: 50px;
     margin-left: 120px;
+    padding-top: 20px;
 }
+
 
