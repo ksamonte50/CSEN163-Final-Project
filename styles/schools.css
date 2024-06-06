@@ -1,0 +1,87 @@
+.reviewcontainer {
+    display: flex;
+    /* justify-content: space-between; */
+    /* padding: 10px; */
+    column-width: 50;
+
+    margin: 0 auto; /* Center the container */
+}
+
+.reviewtext {
+    color:#862633;
+    font-size: 30px;
+}
+
+.fraction1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.fraction2{
+    text-align: center;
+}
+.rating-section .rating {
+    font-size: 48px;
+    color: #862633;
+}
+
+.rating-section .rating span {
+    font-size: 24px;
+}
+
+.rating-section p {
+    margin: 5px 0;
+}
+
+.container {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    padding-left: 60px; /* Adjust the padding value as needed */
+    max-width: 1200px; /* Ensure the container does not take up the whole width */
+    margin: 0 auto; /* Center the container */
+}
+
+
+.left-column, .right-column {
+    flex: 1;
+    padding: 20px; /* Add padding to columns */
+}
+.scu-img img {
+    width: 500px; /* Adjust the width to make the image smaller */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image is a block element */
+    margin-top: 10px; /* Space between title and image */
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+
+.diningcontainer {
+    background-color: #862633;
+    padding: 50px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 50px auto;
+    border-radius: 20px;
+}
+.diningcontainer button {
+    margin: 30px;
+    padding: 20px 75px;
+    background-color: #F7F6F2;
+    border: none;
+    color: black;
+    font-family: sans-serif;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.diningcontainer button:hover {
+    background-color: #f1f1f1;
+}
+
+.title {
+    /* margin-left: 150px; */
+    padding-left: 50px;
+    margin-left: 120px;
+}
+
